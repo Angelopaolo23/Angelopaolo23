@@ -72,7 +72,7 @@ El context engineering aplicado más allá del código es una forma de resolver 
 
 **DevOps**: Azure · GitHub Actions · Docker · Azure DevOps
 
-**Tooling**: Claude Code (heavy user, workflow AI-native desde meses) · Cursor · Vitest · Jest · Pytest · Winston
+**Tooling**: Claude Code (heavy user, workflow AI-native desde meses) · Vitest · Jest · Pytest · Winston
 
 ---
 
@@ -86,8 +86,8 @@ Kairos Engine y RAIOS están en repositorios privados por tratarse de proyectos 
 
 ## 📬 Contacto
 
-- LinkedIn: [tu-url-linkedin]
-- Email: [tu-email]
+- LinkedIn: https://www.linkedin.com/in/angelobuguenobug-dev/
+- Email: angelopaolo0223@gmail.com
 - Santiago, Chile · Abierto a roles AI Engineer / FDE / Founding Engineer / Product Engineer (remote o híbrido)
 
 ---
