@@ -10,7 +10,7 @@ Construyo productos digitales donde IA, ingeniería de producto y visión de neg
 
 ## 🔭 Proyectos actuales
 
-### ELIOX / Kairos Engine — AI Career Companion para LATAM
+### Vista Tempesta / Kairos Engine — AI Career Companion para LATAM
 
 Plataforma que ayuda a profesionales tech a redescubrir su identidad profesional y encontrar oportunidades alineadas con quienes son.
 
