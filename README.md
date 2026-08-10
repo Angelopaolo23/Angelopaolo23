@@ -1,4 +1,3 @@
-```markdown
 # Angelo Paolo Bugueño Bugueño
 
 **Fundador de Vista Tempesta · AI Engineer + Ingeniero en Negocios Internacionales** · Santiago, Chile
@@ -99,6 +98,6 @@ Vista Tempesta y RAIOS están en repositorios privados: son productos en proceso
 ---
 
 *Καιρός — no el tiempo que pasa, sino el que importa.*
-```
+
 
 ---
