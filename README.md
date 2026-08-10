@@ -1,98 +1,104 @@
-# Angelo Paolo Bugueño
+```markdown
+# Angelo Paolo Bugueño Bugueño
 
-**Founder & AI Engineer** · Santiago, Chile
+**Fundador de Vista Tempesta · AI Engineer + Ingeniero en Negocios Internacionales** · Santiago, Chile
 
-Construyo productos digitales donde IA, ingeniería de producto y visión de negocio se cruzan. Heavy user de Claude Code con workflow AI-native en producción. Formación Full Stack reciente (Talento Digital SENCE, abr 2026) + preparando examen Azure AI Engineer Associate (AI-102).
+Diseño el objetivo y construyo el sistema: la estrategia y la implementación no se separan. En la mayoría de los proyectos de IA esas dos cosas son dos personas, y el valor se pierde en el traspaso.
 
 > *"El contexto bien estructurado es la forma más alta de ingeniería."*
 
 ---
 
-## 🔭 Proyectos actuales
+## 🔭 Qué estoy construyendo
 
-### Vista Tempesta / Kairos Engine — AI Career Companion para LATAM
+### Vista Tempesta — tu manager de carrera en tech
 
-Plataforma que ayuda a profesionales tech a redescubrir su identidad profesional y encontrar oportunidades alineadas con quienes son.
+Lee la historia completa de una persona y mide cada oferta contra su tiempo, sus fortalezas, sus valores y lo que la mueve. Enfocado primero en Chile. **Hoy en beta.**
 
-- **Arquitectura**: híbrida Python + Semantic Kernel + Azure OpenAI. Scoring engine determinista (auditable, testeable) + agente LLM con RAG sobre pgvector.
-- **Pipeline de síntesis**: 6 plugins Semantic Kernel orquestados en 7 fases (CultureRadar, RequirementClassifier, SASEvaluator, ContentDrafting, Verification, BrandCoherence).
-- **Calidad**: 900+ tests automatizados. Observability por LLM call (prompt, contexto, costo, latencia persistidos). Guardrails activos (intent classifier + Azure Content Safety). OWASP Top 10 for LLMs awareness por feature.
-- **Principio core**: *"el LLM clasifica, el código calcula"* — lógica determinista en Python, el LLM para síntesis/clasificación. Patrón Recover → Synthesize → Validate → Persist garantizando grounding contra corpus del usuario.
+Lo construí de punta a punta: producto, arquitectura, narrativa, precio e instrumentación.
+
+- **Arquitectura híbrida bajo un principio explícito — el modelo clasifica, el código calcula**: motor de scoring determinista en Python (auditable, testeable, reproducible por hash de entrada) + agente LLM que sintetiza sobre el contexto profesional del usuario, con grounding obligatorio contra hechos verificables.
+- **Coherencia como disciplina de ingeniería**: los componentes críticos llevan un manifiesto que declara sus invariantes **y el porqué de cada una**, más las alternativas descartadas — un test en integración continua falla citando la razón, no solo la regla. La carta de voz es fuente única de verdad, verificada por tests. Prompts versionados con regresión de evaluaciones antes de cada cambio sustantivo.
+- **Operabilidad**: observabilidad por llamada al modelo (prompt, contexto, costo, latencia), clasificador de intención y moderación como primera capa de defensa, OWASP Top 10 for LLMs contemplado en cada feature.
 - **Stack**: Django 6 · Python 3.14 · Next.js 16 · React 19 · TypeScript · Semantic Kernel · Azure OpenAI · Supabase · pgvector
 
-*Demo no pública por el momento (infraestructura LLM con costo por uso). Acceso coordinado disponible para procesos de selección.*
-
-<!-- ESPACIO IMAGEN 1: Screenshot de arquitectura o UI de Kairos
-Insertar aquí:
-![Kairos architecture](URL_DE_LA_IMAGEN)
--->
+<!-- ESPACIO IMAGEN 1: arquitectura o una vista del producto -->
 
 ---
 
-### RAIOS — Marketplace de Arte y Artesanía Chilena
+### Consultoría e implementación de IA en instituciones
 
-E-commerce que conecta artistas emergentes y artesanos con compradores. Democratiza el acceso a arte y abre vía de monetización real.
+Acompaño a instituciones a pasar de la curiosidad sobre IA a procesos que funcionan y que alguien adentro puede sostener.
 
-- **Demo pública**: [delightful-island-08498ff0f.6.azurestaticapps.net](https://delightful-island-08498ff0f.6.azurestaticapps.net/)
-- **Arquitectura**: backend dual — Supabase (CRUD, RLS, storage, auth, edge functions) + Express.js custom para lógica transaccional crítica con MercadoPago (carritos, órdenes, conciliación).
-- **Calidad**: observability con Winston, suites Jest + Supertest (backend) + Vitest (frontend), documentación OpenAPI/Swagger, CI/CD automatizado en Azure vía GitHub Actions.
-- **Lanzamiento oficial**: 14 de mayo 2026.
-- **Stack**: React · Redux · TailwindCSS · Vite · Express.js · Supabase · PostgreSQL · Winston · Jest · Vitest · MercadoPago · Azure · GitHub Actions
+Diseñé y entregué dos jornadas de capacitación a la plana directiva del **Centro Cultural Gabriela Mistral** (julio 2026): fundamentos de inteligencia artificial, ingeniería de prompts, el ecosistema Claude, Claude Cowork y Claude Code.
 
-<!-- ESPACIO IMAGEN 2: Screenshot de RAIOS (landing o vista producto)
-Insertar aquí:
-![RAIOS marketplace](URL_DE_LA_IMAGEN)
--->
+El objetivo no era enseñar una herramienta: era el **cambio de mentalidad operativa**. Que el superpoder sea la forma de usar la inteligencia artificial —ingeniería de contexto y construcción documentada de los propios procesos— y no el modelo del mes. Un equipo que trabaja así queda agnóstico a la herramienta: cuando cambia el modelo, no hay que volver a capacitar.
+
+Con demos construidas sobre documentos reales de la institución:
+
+- **Procesador de documentos institucionales** — toma un lote heterogéneo (PDF, imágenes escaneadas, propuestas, cotizaciones) y lo contrasta contra las bases de una convocatoria, o contra cualquier conjunto de reglas, devolviendo extracción estructurada y síntesis ejecutiva.
+- **Framework operativo del contexto institucional** — persiste el contexto de cada área para poder levantarlo y automatizar procesos encima, en vez de reexplicarlo cada vez.
 
 ---
 
-## 🧠 Enfoque: Context Engineering como filosofía
+### RAIOS — marketplace de arte y artesanía chilena
 
-Más allá del patrón de desarrollo agéntico, entiendo *context engineering* como una forma general de abordar problemas complejos: **estructurar el contexto de un sistema (técnico, operacional, personal) de forma que las soluciones emerjan con claridad**.
+Conecta artistas emergentes y artesanos con compradores, y abre una vía de monetización real para quienes están fuera del circuito comercial tradicional. Plataforma construida y funcional, con demo público; el lanzamiento se pospuso y hoy avanza a ritmo lento y deliberado. El catálogo es de demostración.
 
-Eso atraviesa lo que construyo:
+- **Backend dual razonado**: Supabase para CRUD, RLS, autenticación, almacenamiento y edge functions; Express.js propio para la lógica transaccional crítica con MercadoPago (carritos, órdenes, conciliación). Cada decisión orientada a integridad transaccional.
+- **Ingeniería de producto con agentes**: orquesté el desarrollo de la lógica compleja con agentes bajo un enfoque de ingeniería de contexto, actuando como revisor crítico para acelerar ciclos sin perder calidad.
+- **Calidad**: observabilidad con Winston, Jest + Supertest en backend, Vitest en frontend, documentación OpenAPI, integración y despliegue continuos en Azure vía GitHub Actions.
+- **Stack**: React · Redux · TailwindCSS · Vite · Express.js · Supabase · PostgreSQL · Redis · Winston · Jest · Vitest · MercadoPago · Azure · GitHub Actions
 
-- **Kairos**: cada plugin Semantic Kernel recibe contexto estructurado del corpus profesional del usuario. La calidad del output correlaciona directamente con la calidad del contexto, no con el prompt.
-- **RAIOS**: separación consciente entre contexto transaccional (Express.js custom) y contexto CRUD (Supabase) según integridad requerida.
-- **Proyectos no-software**: actualmente rediseñando un sistema de riego artesanal en parcela familiar — levantando el contexto completo (infraestructura, elementos, distribución de árboles, equipamiento) para reconstruir modular, sectorizado y escalable.
-
-El context engineering aplicado más allá del código es una forma de resolver problemas que se puede entrenar. Es mi apuesta metodológica más fuerte.
+<!-- ESPACIO IMAGEN 2: home del marketplace -->
 
 ---
 
-## 🛠️ Stack principal
+## 🧠 Ingeniería de contexto, más allá del código
 
-**AI / ML**: Semantic Kernel · Azure OpenAI · RAG · pgvector · LLMOps · MCP · prompt engineering
+Entiendo la ingeniería de contexto como una forma general de abordar problemas: **estructurar el contexto de un sistema —técnico, operacional, personal— de forma que las soluciones emerjan con claridad.**
+
+Trabajo con agentes de IA, principalmente Claude Code, no solo para escribir código: también para aterrizar ideas, diagnosticar y planificar. Sobre Claude Code armé mi propio protocolo de trabajo: fases obligatorias, estado durable entre sesiones, y una regla — **no cierro una versión cuando los tests pasan; los tests verdes son cuando empieza la auditoría**, hecha con agentes a los que se les pide encontrar fallas y no validar el trabajo. Así aparecieron errores críticos que la suite daba por buenos.
+
+Porque con IA el cuello de botella dejó de ser escribir código: es que el sistema **conserve las decisiones que lo originaron**. Y no solo el código driftea — driftea la narrativa: los prompts, los textos de la interfaz y la voz del producto se van desalineando entre sí, y mientras más fuerte es la narrativa, más hay que sostener. Es AI slop en su versión narrativa, y se ataca igual que un bug: haciéndolo detectable.
+
+Fuera del software: rediseñando el sistema de riego de una parcela familiar — levantar el contexto completo (infraestructura, distribución de los árboles, equipamiento) para reconstruirlo modular, sectorizado y escalable. Mismo método.
+
+---
+
+## 🛠️ Stack
+
+**IA**: Semantic Kernel · Azure OpenAI · RAG · pgvector · MCP · ingeniería de prompts y de contexto
 
 **Backend**: Python · Django · Node.js · Express · NestJS · TypeScript · REST · OpenAPI
 
 **Frontend**: Next.js · React · TypeScript · Tailwind CSS · Redux · Vite
 
-**Data**: PostgreSQL · Supabase · pgvector
+**Datos**: PostgreSQL · Supabase · pgvector · Redis
 
-**DevOps**: Azure · GitHub Actions · Docker · Azure DevOps
+**Infraestructura**: Azure · GitHub Actions · Docker
 
-**Tooling**: Claude Code (heavy user, workflow AI-native desde meses) · Vitest · Jest · Pytest · Winston
+**Herramientas**: Claude Code · Vitest · Jest · pytest · Winston
 
 ---
 
-## 📝 Sobre repositorios privados
+## 📝 Sobre los repositorios privados
 
-Kairos Engine y RAIOS están en repositorios privados por tratarse de proyectos en proceso de monetización. El contribution graph refleja la actividad continua desarrollándolos.
+Vista Tempesta y RAIOS están en repositorios privados: son productos en proceso de monetización. El gráfico de contribuciones refleja la actividad continua desarrollándolos.
 
-**Acceso de solo-lectura disponible a petición** para procesos de selección, colaboraciones puntuales o demostración técnica.
+**Acceso de solo lectura disponible a petición** para colaboraciones puntuales o demostración técnica.
 
 ---
 
 ## 📬 Contacto
 
-- LinkedIn: https://www.linkedin.com/in/angelobuguenobug-dev/
-- Email: angelopaolo0223@gmail.com
-- Santiago, Chile · Abierto a roles AI Engineer / FDE / Founding Engineer / Product Engineer (remote o híbrido)
+- **angelo@vistatempesta.com**
+- LinkedIn: [angelobuguenobug-dev](https://www.linkedin.com/in/angelobuguenobug-dev/)
+- Santiago, Chile
 
 ---
 
 *Καιρός — no el tiempo que pasa, sino el que importa.*
 ```
 
-
+---
